@@ -10,7 +10,7 @@ An easy way to setup Airflow server locally is to use Docker and the popular Doc
 
 ```bash
 # Run Airflow container and mount your local DAGs folder
-docker run -itd -v /Users/codigube/Documents/my-projects/airflow-quickstart/dags:/usr/local/airflow/dags -p 8080:8080 --name airflow  puckel/docker-airflow:latest
+docker run -it -v /Users/codigube/Documents/my-projects/airflow-quickstart/dags:/usr/local/airflow/dags -p 8080:8080 --name airflow  puckel/docker-airflow:latest
 ```
 
 After container is up running, you can log into container to test Airflow with CLI
@@ -42,6 +42,3 @@ Run unit tests
 ```bash
 python -m unittest discover -s dags -p "*_test.py"
 ```
-
-## Setup Concourse
-
